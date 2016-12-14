@@ -17,4 +17,6 @@ rm AutoDict*
 
 echo "___________________________"
 echo "Done"
+echo 
+echo "May you have long days and pleasant nights"
 echo "___________________________"

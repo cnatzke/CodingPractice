@@ -36,6 +36,4 @@ data[308]=rtpath
 with open('angCorr.C','w') as output_file:
     output_file.writelines(data)
    
-print
-print("Done, \nMay you have long days and pleasant nights")
 
