@@ -16,9 +16,17 @@ if skipBool in yes:
 else:
     moda='\t\tif(i!=0){\n'
 
+
 #Open ggac analysis macro and create list by line number
 with open('angCorr.C','r') as file:
     data=file.readlines()
+
+#Query for fitting or no fitting
+fitBool=raw_input('Do you want to fit the ggac? (y/n)')
+if fitBool in yes:
+    data[266]='\t\tg->Fit("efit");\n'
+else:
+    data[266]='// \t\tg->Fit("efit");\n'
 
 #Change desired lines (linenumber-1)
 data[67]=data[134]=moda
@@ -28,7 +36,6 @@ data[308]=rtpath
 with open('angCorr.C','w') as output_file:
     output_file.writelines(data)
    
-print
 print
 print("Done, \nMay you have long days and pleasant nights")
 
